@@ -1,0 +1,140 @@
+
+/* Los ids se llaman con '#' */
+#selectorId{
+    color: #5d1be2;
+    /* color:red: */
+    /* color: rgb(235, 128, 5); */
+    /* color: rgba(red, green, blue, alpha); */
+}
+
+/* Las clases se llaman con '.'(punto) */
+.selectorClase{
+    color: crimson;
+}
+
+/* p{
+    color: blueviolet;
+} */
+
+.padre p{
+    color: cadetblue;
+}
+
+.combinadorHijo > p{
+    color: red;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: #5d1be2;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.caja-mediana{
+    width: 200px;
+    height: 200px;
+    background-color: #8c54fb;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.caja-mediana p{
+    font-size: 2em;
+}
+
+.caja-grande{
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.em{
+    font-size: 2em;
+}
+.rem{
+    font-size: 1rem;
+}
+
+.porcentaje{
+    width: 50%;
+    height: 50%;
+    background-color: beige;
+}
+
+.vh{
+    height: 10vh;
+    background-color: beige;
+}
+
+.vw{
+    width: 10vw;
+    background-color: beige;
+}
+
+.bg-color{
+    background-color: aqua;
+}
+
+.bg-img{
+    background-image: url('./img/bg-pattern.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-repeat{
+    background-image: url('./img/bg-repeat.png');
+    background-repeat: repeat;
+}
+
+.bg-attac{
+    background-image: url('./img/bg-pattern.jpg');
+    background-attachment: fixed;
+}
+
+.bg-position{
+    background-image: url('./img/bg-pattern.jpg');
+    background-size: cover;
+    background-position: right;
+}
+
+.bg-size{
+    background-image: url('./img/messi.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+.color p{
+    color: crimson;
+}
+
+.caja-shadow{
+    background: #8c54fb;
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;
+} 
+
+.offset-XY{
+    box-shadow: 10px 10px;
+}
+
+.blurRadius{
+    box-shadow: 10px 10px 5px;
+}
+
+.spreadRadius{
+    box-shadow: 10px 10px 5px 5px;
+}
+
+.colorOpacidad{
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.inset{
+    box-shadow:inset 10px 10px 5px 5px rgba(0, 0, 0, 0.75);
+}
