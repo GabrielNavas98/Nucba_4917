@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
 
 /* Los ids se llaman con '#' */
+
 #selectorId{
     color: #5d1be2;
     /* color:red: */
@@ -137,4 +139,58 @@
 
 .inset{
     box-shadow:inset 10px 10px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.font-fa{
+    font-family: "Playwrite BE VLG", cursive;
+    font-weight: 400;
+}
+
+.font-we{
+    font-weight: 100;
+}
+
+.font-style{
+    font-style: italic;
+}
+
+.font-size{
+    font-size: 20px;
+}
+
+.letter-s{
+    letter-spacing: 10px;
+}
+
+.word-s{
+    word-spacing: 20px;
+}
+
+.line-he{
+    line-height: 55px;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.text-transform{
+    text-transform: lowercase;
+}
+
+.text-decoration{
+    text-decoration: underline;
+}
+
+.none-style{
+    list-style-type:none;
+}
+
+.list-position{
+    list-style-position: inside;
+}
+
+.lista-img{
+    list-style-position: inside ;
+    list-style-image: url('./img/messi-list-img.jpg');
 }
