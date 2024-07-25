@@ -1,0 +1,129 @@
+.overflow-box{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 1rem ;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+.auto{
+    overflow: auto;
+}
+
+.padding{
+    background-color: crimson;
+    padding: 10px 5px 20px 15px;
+}
+
+.solid{
+    border: 5px solid crimson;
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.dashed{
+    border: 5px dashed crimson;
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.dotted{
+    border: 5px dotted cadetblue;
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.double{
+    border: 5px double crimson;
+}
+
+.radius{
+    background-color: #8c54fb;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px 32px 30px 40px;
+    /*arriba izq y abajo der /  arriba der y abajo izq */
+    /* border-radius: 16px 32px; */
+    /*para todas las esquinas */
+    /* border-radius: 16px; */
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 1rem ;
+}
+.margin{
+    background-color: #8c54fb;
+    margin: 10px 5px 20px 30px;
+    /* margin-bottom: 20px; */
+    /* margin-left: 30px; */
+    /* margin-top: 30px; */
+    /* margin-rigth: 30px; */
+}
+
+.caja-ej{
+    max-width: 100%;
+    border: 1px solid crimson;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 200px;
+}
+
+/* .block{
+    display: inline;
+} */
+
+.inline{
+    border: 1px solid crimson;
+    padding: 1rem;
+    border-radius: .5rem;
+    /* height: 200px; */
+    /* width: 300px; */
+    /* display: block;  si activo display block me permite cambiar ancho y alto*/
+}
+
+/*Postions */
+
+.relative{
+    background-color: #8c54fb;
+    position: relative;
+    /* right: 100px; */
+    /* top: 50px; */
+    left: 20px;
+    bottom: 30px;
+}
+
+.absolute{
+    background-color: #8c54fb;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.absolute-container{
+    background-color: #fafafa;
+    padding: 20px;
+    /* position: relative; */
+}
+
+.fixed{
+    background-color: #8c54fb;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    /* spoiler */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
