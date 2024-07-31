@@ -1,0 +1,291 @@
+/*Estilos De cajas de la clase*/
+.container{
+    background-color: #131415;
+    width: 100%;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.caja-flex{
+    background-color: var(--purple);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*==== PSEUDOELEMENTOS ====*/
+.caja-flex:nth-child(2){
+    background-color: var(--rose);
+}
+
+
+/*=======FLEX========*/
+/*======== Flex direction =========*/
+
+
+.row{
+    display: flex;
+    gap: 10px;
+}
+
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+/*======== Wrap =========*/
+
+.wrap{
+    display: flex;
+    background-color: #ffffff;
+    max-width: 250px;
+    padding: 1rem;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+
+.nowrap{
+    display: flex;
+    background-color: #ffffff;
+    max-width: 250px;
+    padding: 1rem;
+    gap: 10px;
+    flex-wrap: nowrap;
+    border-radius: 1rem;
+}
+
+
+/*=======Justify content ===========*/
+.jc-start{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.jc-end{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+.jc-center{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.jc-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.jc-space-around{
+    display: flex;
+    justify-content: space-around;
+}
+
+.jc-space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*======= align items ===========*/
+
+.props-align{ /*Caja contenedora*/
+    height: 350px;
+    background-color: #131415;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 500px;
+}
+
+.ai-start{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.ai-end{
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.ai-center{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ai-stretch{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.caja-flex-stretch{
+    background-color: var(--rose);
+    width: 100px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.ai-baseline{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.caja-flex-baseline{
+    width: 100px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.baseline-1{
+    background-color: var(--purple);
+    padding-top: 30px;
+}
+
+.baseline-2{
+    background-color: var(--rose);
+    padding-top: 80px;
+}
+
+.baseline-3{
+    background-color: green;
+    padding-bottom: 150px;
+}
+
+/*======= align content ===========*/
+.props-align-content{/*caja contenedora*/
+    height: 350px;
+    max-width: 330px;
+    background-color: #131415;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap; /*si no no funca*/
+    gap: 10px;
+}
+
+.ac-start{
+    align-content: flex-start;
+}
+
+.ac-end{
+    align-content: end;
+}
+
+.ac-center{
+    align-content: center;
+}
+
+.ac-space-between{
+    align-content: space-between;
+}
+
+.ac-space-around{
+    align-content: space-around;
+}
+
+.ac-stretch{
+    align-content: stretch;
+}
+
+.stretch{
+    width: auto;
+}
+
+/*======= order ===========*/
+.flex {
+    display: flex;
+    gap: 40px;
+}
+  
+.order-1{
+    order: 2;
+}
+.order-2{ 
+    order: 3
+}
+
+.order-3{
+    order:1
+}
+
+/*======= grow ===========*/
+
+.grow-1{
+    flex-grow: 3;
+}
+
+.grow-2{
+    flex-grow:1;
+}
+
+/*======= shrink ===========*/
+
+.contenedor-shrink{
+    max-width: 300px;
+}
+
+.shrink-1{
+    flex-shrink: 0;
+}
+
+.shrink-2{
+    flex-shrink: 3;
+}
+
+.shrink-3{
+    flex-shrink: 3;
+}
+
+/*======= basis ===========*/
+
+.basis-1{
+    flex-basis: 200px;
+}
+.basis-2{
+    flex-basis: 600px;
+}
+.basis-3{
+    flex-basis: 150px;
+}
+
+/*======= Self ===========*/
+
+.self{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    gap: 10px;
+}
+
+.self-1{
+    align-self: flex-end;
+}
+
+.self-2{
+    align-self: flex-start;
+}
