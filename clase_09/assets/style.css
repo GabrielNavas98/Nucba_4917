@@ -1,0 +1,228 @@
+/*======================== FUENTE ======================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ============= VARIABLES ============ */
+:root {
+    /* bg-colors */
+    --background: #02050e;
+    --primary: #1e50ff;
+    --secondary: #272d37;
+    --btn-bg: #050d26;
+    --bg-azul-10: #e9eeff;
+    --bg-white: #fff;
+    --bg-electric: #f0fbff;
+    --nav-bg: #0f1525;
+  
+    /* Text colors */
+    --text-gray: #adb9c7;
+    --text-white: #f3f4f6;
+  
+    /* Decoration */
+    --fire: #ff6d00;
+    --electric: #64d3ff;
+}
+
+/* ============= RESET ============ */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============= HEADER ============ */
+
+header{
+    background: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; /*0 30px 0 30px*/
+    height: 65px;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar,
+.navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    gap: 150px; 
+}
+
+.navbar-list{
+    gap: 30px;
+}
+
+.navbar-list a{
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+/* Pseudoclases y first child(primer hijo) 
+.navbar-list li:first-child > a{
+    font-weight: 600;
+    color: var(--text-white);
+}*/
+
+.navbar-list .active{
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.logo{
+    height: 40%;
+}
+
+.cart-icon{
+    height: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* ============= MAIN ============ */
+
+main{
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-white);
+}
+
+/* ============= HERO ============ */
+
+#hero{
+    max-width: 1200px;
+    margin-top: 65px;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    gap: 20px;
+}
+
+.hero-info h1{
+    font-size: 48px;
+    font-weight: 800;
+    width: 80%;
+    min-width: 500px;
+}
+
+.hero-info p{
+    font-size: 14px;
+    width: 60%;
+    color: var(--text-gray);
+}
+
+.hero-info span{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-info a{
+    background-color: var(--primary);
+    color: var(--text-white);
+    width: 120px;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 14px ;
+    border-radius: 8px;
+}
+
+.hero-card{
+    background: var(--secondary);
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-card-top h3{
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-card-top span{
+    background: var(--primary);
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 0;
+    width: 50px;
+    font-size: 14px;
+}
+
+.hero-card-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-card-creator{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-card-creator img{
+    height: 40px;
+    width: 40px;
+}
+
+.creator-info span,
+.hero-card-price p{
+    font-size: 12px;
+    color: var(--text-gray);
+    font-weight: 300;
+}
+
+.hero-card-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.creator-info p{
+    font-size: 14px;
+}
+
+.hero-card-price span{
+    font-weight: 700;
+}
