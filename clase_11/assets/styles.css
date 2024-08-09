@@ -1,0 +1,169 @@
+/* ==== FUENTE ==== */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==== RESET ==== */
+*{
+    margin: 0;    
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+/* Este color no se selecciona por que gana por especificidad estilos en linea */
+h1{
+    color: red;
+    font-weight: 800;
+}
+
+/* ========== SELECTORES============
+
+-   Selector universal =>      *  
+-   Selector de clase =>       .
+-   Selector id =>             #
+-   Selector de etiqueta =>    main, html, h1, span, p, a
+-   combinador de descendientes =>     .lista-ejemplo p{...} (selecciona todos los hijos)
+-   combinador hijo directo =>    .padre > p {..}   (selecciona solo los hjijos directos)
+-   union de selectores =>        .clase1, .clase2, h3{...}
+
+
+*/
+
+#selectores{
+    background-color: cadetblue;
+    padding: 10px; /*En todos los lados*/
+    /* padding: 10px 5px; 10 arriba y abajo- 5 a los costados */
+    /*padding: 10px 5px 6px 20px; /*En setido horario arriba der abajo izq*/
+    /* Se puede hacer lo mismo con el margin */
+    margin-top: 60px;
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+.item{
+    background-color: crimson;
+    padding: 10px;
+    margin: 5px 0;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+a, p{
+    border: 1px solid blue;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* 
+Se puede cambiar su display
+p{
+    display: inline;
+}
+a{
+    display: block;
+} */
+
+.active{
+    background-color: orange;
+    color: #fafafa;
+    font-weight: 200;
+}
+
+
+/* BOX SIZING */
+.caja{
+    width: 200px;
+    height: 200px;
+    background: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    font-weight: 600;
+    
+    margin: 10px;
+    padding: 20px;
+    border: 5px solid green;
+}
+
+.content-box{
+    box-sizing: content-box;
+    /* font-size: 4rem; */
+    overflow: hidden;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+/* FLEX */
+
+.flex-container{
+    background-color: #131415;
+    height: 800px;
+    padding: 10px;
+    color: #fafafa;
+    gap: 20px;
+    display: flex;
+    /* 
+    flex-direction: row;
+    justify-content: center; centramos en el eje x
+    align-items: center;  centramos en el eje y
+    */
+    flex-direction: column;
+    align-items: center;    /*centramos en el eje x*/
+    justify-content: center; /*centramos en el eje y*/
+
+}
+
+.item-flex{
+    background: #ff6d00;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.self{
+    align-self: flex-start;
+}
+
+.self3{
+    align-self: end;
+}
+
+/* POSITION */
+
+.container{
+    background-color: #131415;
+    padding: 10px;
+    border-radius: 10px;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: #ff6d00;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.relative{
+    background-color: crimson;
+    position: relative;
+    left: 500px;
+    bottom: -50px;
+}
+
+
+.absolute-container{
+    position: relative; /*si esto no esta, div.absolute se posiciona respecto al viewport*/
+}
+.absolute{
+    position: absolute;
+    background-color: crimson;
+    top: 50px;
+    left: 50px;
+}
