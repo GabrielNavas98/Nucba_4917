@@ -43,8 +43,14 @@ header{
     align-items: center;
     padding: 0 30px; /*0 30px 0 30px*/
     height: 65px;
-    position: fixed;
     width: 100%;
+
+
+    position: fixed;
+    /* POSTITION STICKY, deben comentar fixed */
+    /* position: sticky;
+    top: 50px;
+    z-index: 1; */
 }
 
 .navbar,

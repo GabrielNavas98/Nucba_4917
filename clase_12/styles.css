@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* bg colors */
+  --black: #02050e;
+  --grey: #272d37;
+  --white: #f0fbff;
+  --blue: #0c1221;
+  --red: #b21c05;
+  --green: #168208;
+  --yellow: #ffff00;
+  --orange: #f69d4c;
+  --lightblue: #3f87a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 90%;
+  width: 90%;
+  background-color: var(--grey);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.caja {
+  width: 200px;
+  height: 200px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* GRADIENTES */
+
+/* FONDO 
+.caja1{
+  background: linear-gradient(#f69d4c, #3f87a6);
+  /* background: repeating-linear-gradient(#f69d4c, #3f87a6 50px); */
+  /* background: linear-gradient(60deg, black, white); */
+  /* background: linear-gradient(to bottom, black, white); */
+  /* background: rgb(222,8,37);
+  background: linear-gradient(45deg, rgba(222,8,37,1) 17%, rgba(111,129,22,1) 62%, rgba(18,232,10,1) 100%); */
+  /* background: rgb(222,8,37);
+  background: radial-gradient(circle, rgba(222,8,37,1) 51%, rgba(111,129,22,1) 62%); 
+}
+*/
+/* TEXTO */
+/* .caja2{
+  font-size: 3rem;
+  font-weight: 800;
+  
+  background: linear-gradient(to right, white, red);
+
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+} */
+
+/* Ambos */
+
+/* .caja3{
+  background: linear-gradient(to right, #168208, #f69d4c);
+} */
+
+/* .caja3 span{
+  background: linear-gradient(to right, red, white);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+
+  font-size: 3rem;
+  font-weight: 800;
+} */
+
+/* ============== MEDIAQUERIES ================ */
+
+/* =================== DESKTOP FIRST   => max-width =====================*/
+/* ============== De 1200 para abajo ============ */
+/* @media (max-width:1200px) {
+  
+  body{
+    background-color: red;
+  }
+
+  .container{
+    background-color: #168208;
+  }
+
+  .caja{
+    background-color: white;
+    color: black;
+    font-size: 16px;
+  }
+
+} */
+/* ============== De 992 para abajo ============ */
+@media (max-width:992px) {
+
+  .container{
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .caja{
+    width: 90%;
+    height: 100px;
+    color: #02050e;
+    background-color: white;
+  }
+
+  .caja2{
+    background-color: #b21c05;
+  }
+
+}
+/* ============== De 768 para abajo ============ */
+
+@media (max-width:768px) {
+
+  .caja2{
+    background-color: #3f87a6;
+  }
+
+  .caja1{
+    border-radius:0px ;
+    -webkit-border-radius:0px ;
+    -moz-border-radius:0px ;
+    -ms-border-radius:0px ;
+    -o-border-radius:0px ;
+  }
+
+  .caja3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+  }
+}
+
+/* ============== De 576 para abajo ============ */
+
+@media (max-width:576px) {
+  .container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green);
+  }
+
+  .caja{
+    background-color: red;
+    color: white;
+    font-size: 50px;
+    border: 2px dashed yellow;
+  }
+
+  .caja1{
+    justify-content: flex-start;
+    padding: 30px;
+  }
+
+  .caja2{
+    display: none;
+  }
+
+}
