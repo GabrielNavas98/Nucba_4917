@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NUCBA NFT</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
   </head>
   <body>
     <!-- HEADER -->
-     <!-- para probar sticky, muevan el header debajo del #hero -->
+    <!-- para probar sticky, muevan el header debajo del #hero -->
     <header>
       <!-- LOGO -->
       <img src="./assets/img/logo.png" alt="Logo" class="logo" />
@@ -16,6 +17,13 @@
       <!-- NAVBAR -->
 
       <nav class="navbar">
+        <!-- Menu hamburguesa solo en 992 para abajo -->
+         <!-- siempre los "toggle deben de estar adyacentes a lo qe queremos ocultar o mostar" -->
+        <label for="menu-toggle" class="menu-label">
+          <img src="./assets/img/menu.png" alt="menu icon">
+        </label>
+        <input type="checkbox" id="menu-toggle">
+        <!-- navbar-list -->
         <ul class="navbar-list">
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#discover">Descubre</a></li>
@@ -24,8 +32,100 @@
           <li><a href="#">Contactanos</a></li>
         </ul>
 
-        <!-- LOGO CARRITO -->
-        <img src="./assets/img/cart-icon.svg" alt="Carrito" class="cart-icon" />
+        <!-- CARRITO toggle -->
+        <label for="cart-toggle">
+          <img
+            src="./assets/img/cart-icon.svg"
+            alt="Carrito"
+            class="cart-icon"
+          />
+        </label>
+        <input type="checkbox" id="cart-toggle">
+        <!-- Carrito -->
+        <div class="cart">
+          <h2>Tus NFTs</h2>
+          <!-- Producto carrito -->
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+
+
+           <!-- Divider -->
+           <span class="divider"></span>
+
+           <!-- Total -->
+           <div class="cart-total">
+            <p>Total: </p>
+            <span>18.3 ETH</span>
+           </div>
+
+           <!-- btn Comprar -->
+
+           <button class="btn-add">Comprar</button>
+
+        </div>
       </nav>
     </header>
 

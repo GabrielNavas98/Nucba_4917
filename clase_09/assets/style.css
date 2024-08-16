@@ -37,7 +37,8 @@
 /*======================== HEADER ======================== */
 
 header{
-    background: var(--secondary);
+    /* background: var(--secondary); */
+    background: linear-gradient( to bottom, #121e3c, var(--background) );
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,12 +88,118 @@ header{
 .logo{
     height: 40%;
 }
+/*======================== Carrito ======================== */
 
 .cart-icon{
     height: 30px;
     padding: 5px 10px;
     cursor: pointer;
 }
+
+#cart-toggle, #menu-toggle, .menu-label{
+    display: none;
+}
+
+.cart{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: linear-gradient(to top, #121e3c, var(--background));
+    padding: 50px 30px;
+    border-left: 1px solid var(--nav-bg);
+    height: calc(100vh - 65px);
+    gap: 30px;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* scrollbar-color: #121e3c green; */
+    display: none;
+}
+
+.cart h2{
+    color: var(--text-white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--electric);
+    border-radius: 10px;
+    background: #23232363;
+}
+
+.item-title{
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.item-bid{
+    color: var(--text-white);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    background: linear-gradient(to top, #30cfd0, #c33ad6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 800;
+}
+
+.item-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantity-handler{
+    padding: 2px 8px;
+    color: var(--text-white);
+    border: 1px solid var(--electric);
+    border-radius: 5px;
+}
+
+.down{
+    background-color: var(--secondary);
+}
+.item-quantity{
+    color: var(--text-gray);
+}
+
+.divider{
+    /* margin-top: 20px; */
+    border: 1px solid var(--electric);
+}
+
+.cart-total{
+    display: flex;
+    color: var(--text-white);
+    justify-content: space-between;
+}
+
+.cart-total p{
+    font-weight: 700 ;
+}
+
+.cart-total span{
+    font-size: 18px;
+}
+
+/* Hacemos magia */
+/* el mas (+) selecciona el elemnto adyacente */
+#cart-toggle:checked + .cart{
+    display: flex;
+}
+
 
 /*======================== MAIN ======================== */
 
@@ -133,6 +240,11 @@ main{
     font-weight: 800;
     width: 80%;
     min-width: 500px;
+    /* Gradiente al h1 */
+    background: linear-gradient(to top, #30cfd0, #c33ad6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .hero-info p{
@@ -256,6 +368,7 @@ main{
 .info-cards-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
