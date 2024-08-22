@@ -1,0 +1,182 @@
+/* HOVER */
+.hover{
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 1rem ;
+    transition: all 0.3s ease;
+}
+
+.hover:hover{
+    background-color: #8c54fb;
+}
+
+
+/* active */
+.active{
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.active:active{
+    background-color: #8c54fb;
+    color: crimson;
+}
+
+/* Visited */
+
+.visited:visited{
+    color: #8c54fb;
+}
+
+/* Link */
+
+.link:link{
+    color: crimson;
+}
+
+/* FOCUS */
+
+.focus{
+    padding: 5px 10px;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+}
+
+.focus:focus{
+    background: crimson;
+    color: white;
+    outline: 2px solid #8c54fb;
+}
+
+/* first-child */
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 1rem;
+}
+
+.first .caja:first-child{
+    background-color: #8c54fb;
+}
+
+/* last-child */
+
+.last .caja:last-child{
+    background-color: #8c54fb;
+}
+
+/* first-of-type */
+.first-type p:first-of-type{
+    color: #8c54fb;
+}
+
+/* nth-child-odd */
+
+.nth-child-odd .caja:nth-child(odd){
+    background-color: #8c54fb;
+}
+
+/* nth-child-even */
+
+.nth-child-even .caja:nth-child(even){
+    background-color: #8c54fb;
+}
+
+/* nth-child-number */
+
+.nth-child-number .caja:nth-child(4){
+    background-color: #8c54fb;
+}
+
+/* nth-child-n */
+
+.nth-child-n .caja:nth-child(3n){
+    background-color: #8c54fb;
+}
+
+/* nth-child-number + n */
+.nth-child-numberN .caja:nth-child(2n + 5){
+    background-color: #8c54fb;
+
+}
+/* Pseudo-elementos */
+/* first-letter */
+
+.first-letter::first-letter{
+    color: #8c54fb;
+    font-size:2rem;
+    font-family: serif;
+}
+
+/* first-line */
+
+.first-line::first-line{
+    color: #8c54fb;
+    font-size: 1.5rem;
+    font-family: serif;
+
+}
+
+/* BEFORE */
+
+.before::before{
+    content: '👽';
+    margin-right: 20px;
+}
+
+/* AFTER */
+
+.after::after{
+    content: '✅';
+    margin-left: 20px;
+}
+/* Placeholder */
+.input-placeholder{
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px;
+}
+.input-placeholder::placeholder{
+    background-color: crimson;
+    color: white;
+}
+
+/* Efecto plus */
+
+.efecto{
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: all .5s ease;
+}
+
+.efecto::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: all .5s;
+}
+
+.efecto:hover::before{
+    transform: translateX(0);
+}
+.efecto:hover{
+    color: #000;
+}

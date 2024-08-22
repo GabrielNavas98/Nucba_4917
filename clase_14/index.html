@@ -13,82 +13,123 @@
     href="https://res.cloudinary.com/dcatzxqqf/raw/upload/v1659451742/coding/Dise%C3%B1oWebCDN/cdn_1_sjhqe3.css" />
   <!-- Estilos Clase -->
   <link rel="stylesheet" href="style.css" />
-  <title>CSS - Animaciones y transiciones</title>
+  <title>CSS - PseudoElementos/Clases</title>
 </head>
 
 <body>
   <main class="max-width">
     <h1>
-      1.13 Animaciones y Transiciones
-      <img
-        src="https://renderer-v2.vercel.app/_next/image?url=https%3A%2F%2Fapi.typedream.com%2Fv0%2Fdocument%2Fpublic%2Fac4f6f0d-8160-4e58-9d18-cb5e7c880fb6_Recurso_32_png.png&w=384&q=75"
-        alt="logo" class="logo" />
+      1.12 PseudoClases/Elementos
+      <img src="./logo-nucba.png" alt="logo" class="logo" />
     </h1>
-    <p>
-      En esta clase vamos a terminar de aplicar los pseudo elementos/clases al
-      Pedimon para después comenzar a ver animaciones y transiciones en CSS🤩
-    </p>
+    <p>Explicacion clase</p>
     <h2>Objetivos</h2>
-    <p class="my">
-      Conocer y utilizar animaciones,transiciones y transformaciones en CSS
-    </p>
+    <p class="my">Objetivos clase</p>
     <a href="#" class="btn">Ver más</a>
     <h2>Recursos de la clase:</h2>
     <ul>
       <li>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations">https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations</a>
-      </li>
-
-      <li>
-        <a
-          href="https://www.w3schools.com/css/css3_animations.asp">https://www.w3schools.com/css/css3_animations.asp</a>
-      </li>
-      <li>
-        <a
-          href="https://css-tricks.com/almanac/properties/a/animation/">https://css-tricks.com/almanac/properties/a/animation/</a>
-      </li>
-      <li>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties</a>
+          href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elementss">https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements</a>
       </li>
     </ul>
     <hr class="hr" />
     <section class="info-clase">
-      <!-- Transformaciones -->
-      <h2>Transformaciones</h2>
+      <h2>Pseudo Clases</h2>
       <p class="my">
-        Con las transformaciones podemos realizar efectos 2d y 3d. Podemos
-        mover,rotar, aumentar y disminuir.
+        Las pseudoclases, junto con los pseudoelementos, nos permiten aplicar
+        un estilo a un elemento. No sólo en relación con el contenido del
+        documento, sino también en relación a factores externos. Como el
+        historial del navegador(:visited), el estado de su contenido(:checked)
+        o la posición del mouse (:hover)
       </p>
-
-      <b>Concepto de ejes</b>
-      <ul class="list">
-        <li>👉<b>Eje X</b> Horizontal / Izquierda a Derecha</li>
-        <li>👉<b>Eje Y</b> Vertical / Arriba a Abajo</li>
-        <li>👉<b>Eje Z</b> Adelante Atras, como si fuese 3D</li>
-      </ul>
-
-      <h3>transform:translate()</h3>
+      <h3>Hover</h3>
       <p class="my">
-        Cambiamos la ubicacion del objeto, requiere dos numeros y su unidad,
-        separados por una coma.
+        Se activa cuando el user pasa el mouse sobre un elemento
       </p>
-      <ul class="list">
-        <li>👉El primero es en el eje x</li>
-        <li>👉El segundo es en el eje y</li>
-        <li>👉Valores positivos mueve a la derecha/abajo</li>
-        <li>👉Valores negativos mueve a la izquierda/arriba</li>
-        <li>
-          👉Existe translateX(),translateY(), cada uno recibe un solo valor.
-        </li>
-      </ul>
-      <p class="code">transform:translate(10px,20px)</p>
-      <div class="bg-secondary my flex">
+      <p class="code">a { background-color: #e11d48; }</p>
+      <div class="bg-secondary">
 
 
 
 
+        <a href="#">Pasame el mouse por arriba</a>
+
+
+
+
+
+
+      </div>
+      <p class="code">a:hover{ background-color: #8c54fb; }</p>
+      <div class="bg-secondary">
+
+
+
+
+
+        <a href="#" class="hover">Pasame el mouse por arriba</a>
+
+
+
+
+
+
+      </div>
+      <hr class="hr my" />
+      <h3>Active | Link | Visited</h3>
+      <b>Active</b>
+      <p class="my">
+        La pseudo clase :active se usa comunmente en los elementos &lt;a&gt; y
+        &lt;button&gt;
+      </p>
+      <p class="code">a:active { color: #e11d48; }</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <button href="#" class="active">nucba.com.ar</button>
+
+
+
+
+
+
+
+      </div>
+      <b>visited</b>
+      <p class="my">
+        La pseudo clase :visited representa los enlaces que el usuario ya ha
+        visitado.
+      </p>
+      <p class="code">a:visited { color: purple; }</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <a href="https://carp.com" class="visited">nucba.com.ar</a>
+
+
+
+
+
+
+
+      </div>
+      <b>link</b>
+      <p class="my">
+        La pseudo clase :link representa un elemento que aún no se ha
+        visitado.
+      </p>
+      <p class="code">a:link {color: salmon; }</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <a href="https://carp123.com" class="link">nucba.com.ar</a>
 
 
 
@@ -98,163 +139,21 @@
 
       </div>
       <hr class="hr" />
-      <h3>transform:rotate()</h3>
+      <h3>Focus</h3>
       <p class="my">
-        La rotación nos permite girar un objeto sin deformarlo. Recibe un
-        numero que representa la cantidad de grados a girar el objeto
+        La pseudo clase :focus reprensenta un elemento que ha recibido foco.
+        Se activa cuando el user hace click, toca un elemento o lo selecciona
+        con la tecla Tab del teclado.
       </p>
-
-      <ul class="list">
-        <li>👉Si es positivo, rota a la derecha (sentido horario)</li>
-        <li>👉Si es negativo, rota a la izquierda (sentido antihorario)</li>
-      </ul>
-      <p class="code">transform:rotate(360deg)</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <p class="my">
-        Tambien tenemos rotaciones en <b>rotateX,rotateY y rotateZ</b>
-      </p>
-
-      <hr class="hr" />
-      <h3>transform:scale()</h3>
-      <p class="my">
-        Cambiamos la escala del objeto, como si fuese un zoom. Al igual que el
-        translate, necesita de dos valores
-      </p>
-
-      <ul class="list">
-        <li>👉El primero es el ancho (Escala en eje X)</li>
-        <li>👉El segundo es el alto (Escala en eje Y)</li>
-        <li>👉Valores mayores a 1 agrandan</li>
-        <li>👉Valores entre 1 y 0 achican.</li>
-        <li>👉Valores negativos, escala dado vuelta.</li>
-        <li>
-          👉Tambien existe scaleX(),scaleY(), cada uno recibe un solo valor.
-        </li>
-      </ul>
-      <p class="code">transform:scale(2,1)</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-      <!-- Skew -->
-      <h3>transform:skew()</h3>
-      <p class="my">
-        Lo utilizamos para deformar objetos. Puede recibir dos valores.
-      </p>
-      <ul class="list">
-        <li>👉Los parámetros son angulos en grados (deg)</li>
-        <li>👉El primer valor es en el eje x</li>
-        <li>👉El segundo valor es en el eje y</li>
-      </ul>
-      <p class="code">transform:skew(20deg,10deg)</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <p>Tambien tenemos skew en <b>skewX y skewY</b></p>
-
-      <hr class="hr" />
-      <h2>Transiciones</h2>
-      <p class="my">
-        Las transiciones se basan en conseguir un efecto suavizado entre un
-        estado inicial y un estado final al realizar una acción.
-      </p>
-      <h3 class="my">Propiedades de transición</h3>
-      <b>transition-property</b>
-      <p class="my">Propiedades CSS afectadas por la transicion</p>
-      <p class="code">transition-property: all | none | propiedad css</p>
-
-      <b>transition-duration</b>
-      <p class="my">Tiempo de duración de la transición.</p>
-      <p class="code">transition-duration: 0 | 0.5s</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <b>transition-timing-function</b>
-      <p class="my">Curva de la transición</p>
       <p class="code">
-        transition-timing-function: ease | ease-in | ease-out
+        input:focus{ background: cornflowerblue; color: white }
       </p>
-      <div class="bg-secondary my flex">
+      <div class="bg-secondary my">
 
 
 
 
-
-
-
-
-
-
-
-      </div>
-
-      <b>transition-delay</b>
-      <p class="my">Tiempo de delay de la transición</p>
-      <p class="code">transition-delay: 0 | .15s</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <b>Shorthand de transition</b>
-      <p class="my">Podemos resumir todas las propiedades en una sola.</p>
-      <p class="code">transition: all 0.5s ease;</p>
-      <div class="bg-secondary my flex">
-
-
-
-
-
+        <input type="text" class="focus" placeholder="Ingresa tu nombre..">
 
 
 
@@ -263,28 +162,152 @@
 
       </div>
       <hr class="hr" />
-      <h2>Animaciones</h2>
-      <p class="my">
-        Una vez entendida las transiciones, va a ser super fácil entender como
-        funcionan las animaciones.
-      </p>
-      <p class="my">
-        A diferencia de las transiciones, las animaciones no necesitan de un
-        disparador para que se ejecute la animación. Podemos animar varios
-        estilos a la vez y controlar todo el flujo de la animación.
-      </p>
+
+      <!-- First Child -->
+      <h3>First child</h3>
       <p>
-        Para crear animaciones necesitamos de dos cosas
-        <b>Propiedad animation y @keyframes</b>
+        La pseudo clase :first-child representa el primer elemento entre un
+        grupo de elementos hermanos
       </p>
-      <hr class="hr" />
-      <h3>Pasos para crear una animación</h3>
-      <p class="my">Tenemos una caja, la cual vamos a empezar a animar</p>
-      <div class="bg-secondary">
+      <div class="bg-secondary my">
 
 
 
 
+        <div class="flex first">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- Last child -->
+      <h3>Last child</h3>
+      <p class="my">
+        La pseudo-clase :last-child representa el último elemento entre un
+        grupo de elementos hermanos.
+      </p>
+      <div class="bg-secondary my">
+
+
+
+
+        <div class="flex last">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- First of type -->
+      <h3>First of type</h3>
+      <p class="my">
+        La pseudo-clase :first-of-type representa el primer elemento de su
+        tipo entre un grupo de elementos hermanos
+      </p>
+      <div class="bg-secondary my">
+
+
+
+
+        <div class="flex first-type">
+            <div class="caja"></div>
+            <p>holis</p>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <p>chau</p>
+
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- NTH CHILD -->
+      <h3>Nth child</h3>
+      <p class="my">
+        La pseudo-clase :nth-child() coincide con uno o más elementos en
+        función de su posición entre un grupo de hermanos.
+      </p>
+      <p class="my">Tenemos algunos valores para usar</p>
+      <b>Odd</b>
+      <p>Representa a los elementos cuya posición es impar</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <div class="flex nth-child-odd">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <b>Even</b>
+      <p>Representa los elementos cuya posición es par</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <div class="flex nth-child-even">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <b>Con Numero</b>
+      <p class="my">Representa el elemento que le digamos</p>
+      <div class="bg-secondary my">
+
+
+
+        <div class="flex nth-child-number">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
 
 
 
@@ -293,118 +316,53 @@
 
 
       </div>
-      <p class="my">
-        Una vez tengamos nuestro elemento a animar, debemos definir la
-        animación con la propiedad de <b>@keyframes</b>
-      </p>
-      <p class="code">
-        @keyframes moverCaja { 0% { transform: translateX(0); } 100% {
-        transform: translateX(200px); } }
-      </p>
-      <p class="my">
-        Esta animación va a mover nuestro elemento 200px en el eje X
-      </p>
-      <b>⚠️Importante⚠️</b>
-      <p class="my">
-        Una vez definida nuestra animación, debemos aplicarla a nuestro
-        elemento usando estas propiedades
-      </p>
-      <ul class="list">
-        <li>👉<b>animation-name</b> nombre de la animación</li>
-        <li>👉<b>animation-duration</b> duración de la animación</li>
-      </ul>
-      <div class="bg-secondary">
 
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <p class="my">
-        Las animaciones por defecto se ejecutan una sola vez (cuando el
-        navegador carga la página). ¿Cómo podemos cambiar esto? Con la
-        propiedad <b>animation-iteration-count</b>
-      </p>
-      <p class="code">animation-iteration-count: 1|2|infinite</p>
-      <small>Ej: la animación de arriba se repite infinitamente</small>
-      <h3>¿Por qué vuelve de golpe?</h3>
-      <p class="my">
-        Porque una vez que llega a 100% vuelve a su estado inicial. Esto lo
-        podemos modificar con la propiedad <b>animation-direction</b> Su valor
-        por defecto es normal.
-      </p>
-      <p class="code">
-        animation-direction: normal|reverse|alternate|alternate-reverse
-      </p>
-      <p>Usemos <b>alternate</b> en este ejemplo</p>
-      <div class="bg-secondary">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <p class="my">
-        Alternate va del 0% al 100% y del 100% al 0%. Haciendo el efecto de
-        ida y vuelta.
-      </p>
-
-      <h3>Delay</h3>
-      <p class="my">
-        Podemos establecer un delay/tiempo de retraso a la animación para que
-        se ejecute.
-      </p>
-      <p class="code">animation-delay: 2s;</p>
-
-      <h3>Timing function</h3>
-      <p class="my">
-        Como recordarán en los transitions, tenemos la propiedad para manejar
-        el smooth. En las animaciones también tenemos esa propiedad llamada
-        <b>animation-timing-function</b>
-      </p>
-      <p class="code">
-        animation-timing-function: ease | ease-in | ease-in-out | ease-out |
-        linear;
-      </p>
-      <div class="bg-secondary">
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <p class="my">Ahora tenemos la animación mucho mas fluida!</p>
-      <h3>Estado de la animación</h3>
-      <p class="my">
-        Podemos decirle a la animación que cuando pasemos el mouse sobre el
-        elemento animado, se pause. Lo hacemos con la propiedad
-        animation-play-state
-      </p>
-      <p class="code">elemento:hover { animation-play-state: paused;}</p>
+      <b>Numero n</b>
+      <p>Representa cada cuantos elementos seleccionamos</p>
       <div class="bg-secondary my">
 
 
 
 
 
+        <div class="flex nth-child-n">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+
+
+
+      </div>
+
+      <b>Numero n + Numero</b>
+      <p>Representa a partir de que elemento seleccionamos y cada cuantos.</p>
+      <div class="bg-secondary my">
+
+
+
+
+        <div class="flex nth-child-numberN">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
 
 
 
@@ -412,13 +370,112 @@
 
 
       </div>
-      <b>⚡Shorthand⚡</b>
+
+      <hr class="hr" />
+      <h2>PseudoElementos</h2>
       <p class="my">
-        Podemos resumir todas las propiedades en una sola <b>animation</b>
+        Al igual que las pseudo-clases, los pseudo-elementos se añaden a los
+        elementos, pero la diferencia está en que no describen un estado en
+        especial, si no que se permite añadir estilos a una parte concreta del
+        documento.
       </p>
-      <p class="code">
-        animation: moverCaja infinite alternate ease-in-out 2s
+      <hr class="hr" />
+      <h3>First letter</h3>
+      <p>
+        El pseudo elemento <b>::first-letter</b> aplica estilos a la primera
+        letra de un párrafo.
       </p>
+      <div class="bg-secondary my">
+        
+        
+          <div class="first-letter">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem, commodi veniam cupiditate dolores odio repellat voluptatibus? Similique aspernatur nam porro adipisci id et animi fuga obcaecati facilis molestias inventore deserunt non quae, vero quod vitae corrupti quasi praesentium deleniti explicabo quia officia magni. Esse rem aliquam neque dolores necessitatibus!</p>
+            </div>
+            
+      </div>
+
+      <h3>First Line</h3>
+      <p>
+        El pseudo-elemento <b>::first-line</b> aplica estilos a la primera
+        linea de un párrafo.
+      </p>
+      <div class="bg-secondary my">
+        
+        <div class="first-line">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem, commodi veniam cupiditate dolores odio repellat voluptatibus? Similique aspernatur nam porro adipisci id et animi fuga obcaecati facilis molestias inventore deserunt non quae, vero quod vitae corrupti quasi praesentium deleniti explicabo quia officia magni. Esse rem aliquam neque dolores necessitatibus!</p>
+        </div>
+
+
+      </div>
+
+      <h3>Before</h3>
+      <p>
+        El pseudo-elemento<b>::before</b> crea un pseudo-elemento antes del
+        elemento. Se usa normalmente para agregar contenido estético a un
+        elemento.
+      </p>
+      <div class="bg-secondary my">
+
+
+
+
+        <p class="before">Hola tengo un Before</p>
+
+
+
+
+
+
+      </div>
+      <h3>After</h3>
+      <p>
+        El pseudo-elemento <b>::after</b> crea un pseudo-elemento después del
+        elemento. Se usa normalmente para agregar contenido estético a un
+        elemento.
+      </p>
+      <div class="bg-secondary my">
+
+
+
+
+
+        <p class="after">Hola tengo un After</p>
+
+
+
+
+
+      </div>
+
+      <h3>Placeholder</h3>
+      <p>
+        El pseudo-elemento <b>::placeholder</b> representa al placeholder de
+        un elemento &lt;input&gt;
+      </p>
+      <div class="bg-secondary my">
+
+
+
+
+
+        <input type="text" class="input-placeholder" placeholder="soy un placeholder">
+
+
+
+
+
+      </div>
+
+      <h3>Efectito</h3>
+      <div class="my">
+        
+
+        <a href="#" class="efecto">Messi</a>
+      
+    
+    </div>
+
+
     </section>
   </main>
   <footer class="my">Hecho con ❤️ en Nucba</footer>
