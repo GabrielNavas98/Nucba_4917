@@ -1,0 +1,277 @@
+/* Caja que usamos en todos lados */
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    border-radius: 1rem;
+}
+
+/* =========== TRANSFORM */
+/* translate */
+
+@keyframes translateX {
+
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+/* sin animación */
+/*
+.translateX:hover{
+    transform: translateX(20px);
+} */
+
+/* con animación */
+.translateX{
+    animation-name: translateX;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateY {
+
+    from{
+        transform: translateY(0)
+    }
+    
+    to{
+        transform: translateY(20px);
+    }
+}
+
+.translateY{
+    /* animation-name | animation-duration | animation-itereation-count  */
+    animation: translateY 1s infinite;
+}
+
+@keyframes translate {
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(20px, 10px);
+    }
+}
+.translate{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: translate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* rotate */
+@keyframes rotate {
+    /* podemos evitar el from si la posicion inicial es 0 */
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*sin animacion*/
+/* .rotate:hover{
+    transform: rotate(40deg);
+} */
+ /*con animación*/
+.rotate{
+    animation: rotate 2s infinite alternate;
+}
+
+@keyframes rotate-negative {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.rotate-negative{
+    animation: rotate-negative 2s infinite alternate;
+    background-color: purple;
+}
+
+/* SCALE */
+
+@keyframes scaleX {
+    to{
+        transform: scaleX(1.1);
+    }
+}
+
+.scaleX{
+    animation: scaleX 1s infinite;
+}
+
+@keyframes scaleY {
+    to{
+        transform: scaleY(1.1);
+    }
+}
+
+.scaleY{
+    animation: scaleY 1s infinite;
+}
+
+@keyframes scale {
+    to{
+        transform: scale(1.2);
+    }
+}
+
+.scale{
+    animation: scale 1s infinite;
+}
+
+/* SKEW */
+
+@keyframes skewX {
+    from{
+        transform: skewX(0);
+    }
+    to{
+        transform: skewX(20deg);
+    }
+}
+
+.skewX{
+    animation: skewX 1s infinite;
+}
+
+@keyframes skewY {
+    from{
+        transform: skewY(0);
+    }
+    to{
+        transform: skewY(20deg);
+    }
+}
+
+.skewY{
+    animation: skewY 1s infinite;
+}
+
+@keyframes skew {
+    100%{
+        transform: skew(20deg, 20deg);
+    }
+}
+
+.skew{
+    animation: skew 1s infinite;
+}
+
+/* ============ TRANSITIONS */
+
+/* transition property y duration */
+.transition{
+    /*para transición de entrada y salida*/
+    transition-property: all; 
+    transition-duration: 1s;
+}
+.transition:hover{
+    background-color: purple;
+    width: 300px;
+    transition-duration: 2s; /*aplica para la transición de entrada*/
+}
+
+/* timing-funciton */
+
+.transition-timing{
+    transition-property: all;
+    transition-duration: 1s;
+}
+.transition-timing:hover{
+    background-color: skyblue;
+    /* width: 100px;
+    height: 100px; */
+}
+
+.ease{
+    transition-timing-function: ease;
+}
+
+.ease-in{
+    transition-timing-function: ease-in;
+}
+
+.ease-out{
+    transition-timing-function: ease-out;
+}
+
+/* DELAY */
+
+.transition-delay{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+.transition-delay:hover{
+    background-color: purple;
+}
+
+/* transition-shorthand */
+
+.transition-shorthand{
+    /* property | duration | delay | timing-function  */
+    transition: all 1s ease;
+}
+
+.transition-shorthand:hover{
+    width: 200px;
+    background-color: orange;
+}
+
+/* ANIMACIONES */
+/* SHORTHAND -> animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+@keyframes moverCaja {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(700px);
+    }
+}
+
+.animada{
+    animation-name: moverCaja;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.direction{
+    animation-direction: alternate;
+}
+
+.delay{
+    animation-delay: 2s;
+}
+
+.timing-ease-in{
+    animation-timing-function: ease-in;
+    background-color: purple;
+}
+.timing-ease-out{
+    animation-timing-function: ease-out;
+    background-color: skyblue;
+}
+.timing-ease{
+    animation-timing-function: ease;
+}
+
+.cubic-bezier{
+    animation-timing-function: cubic-bezier(.11,2.18,1,-0.99);
+    background-color: cadetblue;
+}
+
+.state{
+    animation-play-state: running;
+}
+.state:hover{
+    animation-play-state: paused;
+}
+
+.animation-shorthand{
+    animation: moverCaja 2s ease 0.1s infinite alternate;
+}
