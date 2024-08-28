@@ -94,6 +94,8 @@ header{
     height: 30px;
     padding: 5px 10px;
     cursor: pointer;
+    font-size: 18px;
+    color: var(--text-white);
 }
 
 #cart-toggle, #menu-toggle, .menu-label{
@@ -113,7 +115,11 @@ header{
     overflow-y: scroll;
     scrollbar-width: none;
     /* scrollbar-color: #121e3c green; */
-    display: none;
+    /* antes de la transicion teniamos display:none */
+    display: flex;
+    transform: translate(200%);
+    transition: all .5s ease-in-out;
+    z-index: 2;
 }
 
 .cart h2{
@@ -197,7 +203,8 @@ header{
 /* Hacemos magia */
 /* el mas (+) selecciona el elemnto adyacente */
 #cart-toggle:checked + .cart{
-    display: flex;
+    /* antes teniamos display:flex */
+    transform: translate(0%);
 }
 
 

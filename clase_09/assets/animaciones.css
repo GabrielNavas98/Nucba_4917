@@ -1,0 +1,225 @@
+html{
+    /* PAra que sea mejor y mas fluida la navegacion interna */
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px; /*para que no se tapen los titulos con el header*/
+}
+
+/* GLASMORPHISM:
+  el concepto principal de esta tendencia es poner un fondo semitransparente que
+  añade un difuminado al fondo del div en el que se aplique. En este caso, lo usamos para que al abrir el menú
+  hamburguesa y el carrito lo demás .overde la página se vea borroso abajo de este div de clase overlay.
+*/ 
+.overlay{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+
+    /* efecto glass */
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    display: none;
+}
+
+#cart-toggle:checked ~ .overlay{
+    display: block;
+}
+
+#menu-toggle:checked ~ .overlay{
+    display: block;
+}
+
+/* Hover a los link de nuestro nav */
+.navbar-list li{
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* animaciones relacionadas cart */
+.cart-icon, .quantity-handler{
+    transition: all 0.2s ease-out;
+}
+.cart-icon:hover{
+    color: var(--electric);
+}
+
+.quantity-handler:hover{
+    cursor: pointer;
+    background-color: var(--electric);
+    transition: all 0.2s ease-in;
+}
+
+.btn-add, 
+.hero-info a{
+    transition: all 0.2s ease-out;
+}
+
+.btn-add:hover,
+.hero-info a:hover{
+    background-color: var(--fire);
+    transition: all 0.2s ease-in;
+}
+/* Ver mas button */
+.btn-load{
+    transition: all 0.2s ease-out;
+    font-weight: 600;
+}
+
+.btn-load:hover{
+    background-color: var(--electric);
+    color: var(--text-white);
+}
+/* imagen de los productos escalado */
+.product img{
+    transition: all 0.3s linear;
+}
+
+.product img:hover{
+    transform: scale(1.02);
+    transition: all 0.3s linear;
+}
+
+/* Animaciones */
+/* funcionamiento: pasa de opacidad 0 a 1 */
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* aparece desde 100px abajo hacia arriba */
+@keyframes slide-up {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+
+}
+
+/* aparece desde la derecha */
+@keyframes slide-right {
+    0%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.hero-info h1{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+.hero-info p{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.hero-info a{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.hero-card{
+    opacity: 0;
+    animation: fade 1s ease-in forwards,slide-right 1.3s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+/* Animaciones de la seccion 2 */
+#info h2{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.info-card{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+}
+/* aplicamos distintos delay a las cards */
+
+.info-card:nth-child(1){
+    animation-delay: 0.8s;
+}
+.info-card:nth-child(2){
+    animation-delay: 0.7s;
+}
+.info-card:nth-child(3){
+    animation-delay: 1s;
+}
+
+/* Animaciones Typing */
+/* Titila */
+@keyframes blink {
+    to{
+        background: transparent;
+        opacity: 0;
+    }
+}
+/* Para que entre el texto de a poco */
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+
+.hero-info h1 span{
+    position: relative;
+    background: linear-gradient(to top,  #30cfd0, #c33ad6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: capitalize;
+}
+
+.hero-info h1 span::before,
+.hero-info h1 span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-info h1 span::before{
+    background-color: var(--background);
+    animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+
+.hero-info h1 span::after{
+    width: 0.1rem;
+    background:linear-gradient(to top,  #30cfd0, #c33ad6);
+    animation: typewriter 1.2s 1.4s steps(6) forwards, blink 0.8s steps(6) infinite;
+}

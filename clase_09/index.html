@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NUCBA NFT</title>
+    <!-- estilos base -->
     <link rel="stylesheet" href="./assets/style.css" />
+    <!-- mediaqueries -->
     <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <!-- animaciones -->
+    <link rel="stylesheet" href="./assets/animaciones.css">
+    <!-- CDN de font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- FAVICON -->
+     <link rel="icon" sizes="16x16" href="./assets/img/favicons/fire/favicon.ico">
   </head>
   <body>
     <!-- HEADER -->
@@ -28,17 +37,18 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#discover">Descubre</a></li>
           <li><a href="#products">BTC</a></li>
-          <li><a href="#">Youtube</a></li>
-          <li><a href="#">Contactanos</a></li>
+          <li><a href="https://www.youtube.com/c/Nucbaok" target="_blank">Youtube</a></li>
+          <li><a href="https://nucba.com.ar/" target="_blank">Contactanos</a></li>
         </ul>
 
         <!-- CARRITO toggle -->
         <label for="cart-toggle">
-          <img
+          <!-- <img
             src="./assets/img/cart-icon.svg"
             alt="Carrito"
             class="cart-icon"
-          />
+          /> -->
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </label>
         <input type="checkbox" id="cart-toggle">
         <!-- Carrito -->
@@ -126,6 +136,8 @@
            <button class="btn-add">Comprar</button>
 
         </div>
+        <!-- agregamos este div para introducir el overlay con glassmorphismo -->
+        <div class="overlay"></div>
       </nav>
     </header>
 
@@ -134,7 +146,7 @@
       <!-- Hero -->
       <section id="hero">
         <div class="hero-info">
-          <h1>Descubre la nueva era de Crypto</h1>
+          <h1>Descubre la nueva era de <span>Crypto</span></h1>
           <p>
             NUCBA NFT es el primer Marketplace educativo tecnológico de NFT, que
             son elementos digitales épicos que realmente puedes poseer. Los
