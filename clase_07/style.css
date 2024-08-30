@@ -92,28 +92,29 @@
     /* display: block;  si activo display block me permite cambiar ancho y alto*/
 }
 
-/*Postions */
+/*Positions */
 
 .relative{
     background-color: #8c54fb;
     position: relative;
-    /* right: 100px; */
-    /* top: 50px; */
-    left: 20px;
-    bottom: 30px;
+    right: 100px;
+    top: 50px;
+    /* left: 20px;
+    bottom: 30px; */
 }
 
 .absolute{
     background-color: #8c54fb;
     position: absolute;
     top: 50px;
-    right: 20px;
+    right: 60px;
+    /*right: 20px; */
 }
 
 .absolute-container{
     background-color: #fafafa;
     padding: 20px;
-    /* position: relative; */
+    position: relative;
 }
 
 .fixed{

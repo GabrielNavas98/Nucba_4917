@@ -1,0 +1,35 @@
+/* Tablet */
+@media (max-width: 768px) {
+    .content{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+        order:1;
+        max-width: none;
+    }
+    main{
+        order: 2;
+    }
+    
+}
+
+/* Celu */
+@media (max-width:576px) {
+    .btn-menu{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    main{
+        background-color: crimson;
+        color: purple;
+    }
+    .logo{
+        width: 100px;
+    }
+}

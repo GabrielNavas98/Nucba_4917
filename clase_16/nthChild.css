@@ -1,0 +1,27 @@
+.box-container{
+    width: 1000px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box{
+    background-color: crimson;
+    width: 100px;
+    height: 100px;
+}
+
+/* .box-container .box:nth-child(2n + 3){
+    background-color: purple;
+} */
+
+.box-container .box:first-child{
+    background-color: purple;
+}
+
+.box-container .box:last-child{
+    background-color: rgb(19, 0, 128);
+}
