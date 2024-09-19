@@ -222,6 +222,4 @@ let edad = prompt(
 //     console.log('sos menor')
 // }
 
-edad >= 18 
-    ?  console.log('sos mayor')
-    :  console.log('sos menor')
+edad >= 18 ?  console.log('sos mayor') : console.log('sos menor')
