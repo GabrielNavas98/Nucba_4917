@@ -50,5 +50,5 @@ console.dir(losPDelDiv)
 const pTags = document.querySelectorAll('p') //por nombre de etiqueta o por nombre de clase, o por id
 // console.log(pTags);
 
-// pTags.forEach(p => console.log(p))
+// pTags.forEach(p => console.log(p)) //no hace convertir en array para el foreach
 
