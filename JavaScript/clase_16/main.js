@@ -39,23 +39,30 @@
 
 // init();
 
-// /*
-// LocalStorage => espacio de almacenamiento dentro del navegador
-//   Metodos =>
-//           .setItem('key', value)
-//           .getItem('key')
-//         ['perro', 'gato'] => perro,gato
+/*
+LocalStorage => espacio de almacenamiento dentro del navegador
+  Metodos =>
+          .setItem('key', value)
+          .getItem('key')
+        ['perro', 'gato'] => perro,gato
 
-//   JSON (JavaScript Object Notation)
-//     .stringify(value) => convierte a json
-//     .stringify(['perro', 'gato']) => "['perro', 'gato']"
-//     .parse("['perro', 'gato']") => parsea => ['perro', 'gato']
+  JSON (JavaScript Object Notation)
+    .stringify(value) => convierte a json
+    .stringify(['perro', 'gato']) => "['perro', 'gato']"
+    .parse("['perro', 'gato']") => parsea => ['perro', 'gato']
 
-//   Persistencia de datos => F5, cierre de pestañas o ventanas
+  Persistencia de datos => F5, cierre de pestañas o ventanas
 
-// SessionStorage
-//   Persistencia de datos => F5
-// */
+SessionStorage
+  Persistencia de datos => F5
+  
+  localStorage.setItem(
+    "user",
+    JSON.stringify({ name: "Francisco", lastName: "Perez" })
+  );
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user.name);
+*/
 
 //-----------------Validaciones-------------------->
 const form = document.getElementById("valid-form");
