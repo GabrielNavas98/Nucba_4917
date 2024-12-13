@@ -33,6 +33,7 @@ const showLoading = () => {
 const hideLoading = () => {
   loader.style.display = "none";
 };
+
 const getGames = async () => {
   try {
     showLoading();
