@@ -27,6 +27,7 @@ const Routes = () => {
                 </Route>
 
                 <Route path='user/:username' element={<User/>}/>
+                
                 <Route path='*' element={<h2>Error aca no hay nada</h2>}/>
             </ReactDomRoutes>
         </Layout>    
