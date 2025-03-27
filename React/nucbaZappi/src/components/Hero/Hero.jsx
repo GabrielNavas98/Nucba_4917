@@ -8,14 +8,45 @@ import {
   HeroSearchBarStyled,
   IconWrapperStyled,
 } from "./HeroStyles";
+import { useState } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { selectCategory } from "../../redux/categories/categoriesSlice";
 
-const Hero = () => {
+const Hero = ({ doScroll }) => {
+
+  const [value, setValue] = useState('')
+  const dispatch = useDispatch()
+
+  const listOfCategories = useSelector((state) => 
+    state.categories.categories
+  ).map((category) => category.category)
+  
+
+  const handlerSubmit = (e) => {
+    e.preventDefault()
+
+    const newCategory = value.trim().toLowerCase().split(' ').join('')
+
+    const selectedCategory = listOfCategories.find(
+      (category) => category.toLowerCase()  === newCategory)
+
+    if(selectedCategory){
+      dispatch(selectCategory(selectedCategory))
+      doScroll()
+    }else {
+      return alert('Categoría no encontrada')
+    }
+    setValue('')
+  }
+
   return (
     <HeroContainerStyled>
       <div>
         <h1 className="title">¿Qué categoría estás buscando?</h1>
         <HeroFormStyled>
           <HeroSearchBarStyled
+            onChange={(e) => {setValue(e.target.value)}}
+            value={value}
             type="text"
             placeholder="Ej. Pizzas a la piedra"
           />
@@ -23,9 +54,9 @@ const Hero = () => {
             <AiOutlineSearch />
           </IconWrapperStyled>
           <Button
-            onClick={(e) => e.preventDefault()}
+            onClick={(e) => handlerSubmit(e)}
             radius="10"
-            disabled="true"
+            disabled={!value}
           >
             Buscar
           </Button>
