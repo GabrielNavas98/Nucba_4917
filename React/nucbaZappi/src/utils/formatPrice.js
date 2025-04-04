@@ -4,3 +4,10 @@ export const formatPrice = price => {
     currency: 'ARS',
   }).format(price);
 };
+
+//para calcular el total del carrito
+export const totalPrice = (cartItems) => {
+  return cartItems.reduce((acc, item) => {
+    return (acc += item.price * item.quantity)
+  }, 0)
+}
