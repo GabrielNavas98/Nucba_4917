@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux'
 
 import CardsMisOrdenes from "../../components/MisOrdenes/CardsMisOrdenes";
 import Button from "../../components/UI/Button/Button";
@@ -9,9 +10,27 @@ import {
   MisOrdenesPatternStyled,
   MisOrdenesTitleStyled,
 } from "./MisOrdenesStyles";
+import { useEffect } from "react";
+import { getOrders } from "../../axios/axios-order";
+import { clearError, fetchOrderFail } from "../../redux/orders/orderSlice";
 
 const MisOrdenes = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+
+  const { orders, error } = useSelector(state => state.orders)
+  const { currentUser } = useSelector(state => state.user)
+
+  useEffect(() => {
+    if(!orders){
+      getOrders(dispatch, currentUser)
+    }
+    if(!currentUser?.token){
+      dispatch(fetchOrderFail('no hay token'))
+    }else {
+      error && dispatch(clearError())
+    }
+  }, [dispatch, currentUser, orders, error])
 
   return (
     <>
